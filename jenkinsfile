@@ -2,15 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build Info') {
             steps {
-                echo 'Hello from Jenkinsfile'
+                sh 'echo "Building Jenkins Demo Pipeline"'
+                sh 'whoami'
+                sh 'pwd'
             }
         }
 
-        stage('Where') {
+        stage('List Files') {
             steps {
-                sh 'pwd'
+                sh 'ls -l'
             }
         }
     }
