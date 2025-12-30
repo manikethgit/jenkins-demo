@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello from Jenkinsfile'
+            }
+        }
+
+        stage('Where') {
+            steps {
+                sh 'pwd'
+            }
+        }
+    }
+}
+
